@@ -1,1 +1,0 @@
-waybar/launch.sh
