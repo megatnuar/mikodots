@@ -64,6 +64,7 @@ alias c='clear'
 # Shell integrations
 eval "$(fzf --zsh)"
 
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/megatnuar/datasci/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
