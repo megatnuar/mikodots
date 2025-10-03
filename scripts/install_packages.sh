@@ -28,6 +28,7 @@ packages=(
   lazygit
   #  firefox
   nvim
+  stow
   discord
   telegram-desktop
   obsidian
