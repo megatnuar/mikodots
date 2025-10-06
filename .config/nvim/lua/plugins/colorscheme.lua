@@ -7,10 +7,10 @@ return {
   },
 
   -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "tokyonight",
-    },
-  },
+  --  {
+  --    "LazyVim/LazyVim",
+  --    opts = {
+  --      colorscheme = "tokyonight",
+  --    },
+  --  },
 }
