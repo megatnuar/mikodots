@@ -12,6 +12,7 @@ cd scripts
 Then,
 
 ```
+cd ..
 stow .
 ```
 
