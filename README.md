@@ -1,8 +1,7 @@
 # mikodots
 
-![desktop1](files/desktop1.png)
-![desktop2](files/esktop2.png)
-![desktop3](desktop3.png)
+![desktop1](files/desktop1.png) ![desktop2](files/desktop2.png) ![desktop3](files/desktop3.png)
+![desktop4](files/desktop4.png) ![desktop5](files/desktop5.png)
 
 This is my dotfiles for Arch linux based distros. Have tried with a clean Arch install and Endeavour OS. The latter works best.
 
