@@ -21,12 +21,12 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
+# zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-#zinit light Aloxaf/fzf-tab
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# Run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
@@ -52,9 +52,9 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-#zstyle ':completion:*' rehash true
-#zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-#zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':completion:*' rehash true
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+# zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
@@ -65,6 +65,23 @@ alias c='clear'
 eval "$(fzf --zsh)"
 
 # Export
-export PATH="/home/megatnuar/go/bin/:$PATH"
-export PATH="/home/megatnuar/.scripts/:$PATH"
+export PATH="~/go/bin/:$PATH"
+export PATH="~/.scripts/:$PATH"
+export PATH="~/datasci/miniconda3/bin/:$PATH"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/megatnuar/datasci/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/megatnuar/datasci/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/megatnuar/datasci/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/megatnuar/datasci/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
