@@ -35,6 +35,9 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
 
+# Vim Keys
+set -o vi
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
