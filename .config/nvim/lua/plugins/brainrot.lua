@@ -1,4 +1,4 @@
-return {
+#return {
   "sahaj-b/brainrot.nvim",
   event = "VeryLazy",
   opts = {
