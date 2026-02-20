@@ -71,5 +71,3 @@ eval "$(fzf --zsh)"
 # Export
 export PATH="~/go/bin/:$PATH"
 export PATH="~/.scripts/:$PATH"
-export PATH="~/datasci/miniconda3/bin/:$PATH"
-
