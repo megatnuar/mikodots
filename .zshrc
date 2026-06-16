@@ -64,6 +64,7 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 alias fetch='fastfetch'
+alias s="kitten ssh"
 
 # Shell integrations
 eval "$(fzf --zsh)"
