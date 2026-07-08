@@ -5,7 +5,7 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 
 -- Colours
--- source = $HOME/.cache/wal/colors-hyprland.conf
+-- require("$HOME/.cache/wal/colors-hyprland.conf")
 
 hl.config({
 	general = {
