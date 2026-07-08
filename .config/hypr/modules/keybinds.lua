@@ -5,7 +5,7 @@
 -- Set programs that you use
 local terminal = "kitty"
 local fileManager = "nautilus"
-local dmenu = "rofi"
+local dmenu = "rofi -show drun"
 --local menu = "tofi-run | xargs hyprctl dispatch exec --"
 
 ---------------------
