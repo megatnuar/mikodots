@@ -6,7 +6,7 @@
 local terminal = "kitty"
 local fileManager = "nautilus"
 local dmenu = "rofi -show drun"
---local menu = "tofi-run | xargs hyprctl dispatch exec --"
+local calc = "rofi -show calc"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -23,6 +23,7 @@ hl.bind(
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(dmenu))
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(calc))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("waypaper --restore"))
