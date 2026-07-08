@@ -2,28 +2,32 @@
 ---- MY PROGRAMS ----
 ---------------------
 
+-- Set programs that you use
 local terminal = "kitty"
-local filemanager = "nautilus"
-local dmenu = "tofi-drun | xargs hyprctl dispatch exec --"
-local menu = "tofi-run | xargs hyprctl dispatch exec --"
-local mainMod = "SUPER"
+local fileManager = "nautilus"
+local dmenu = "rofi"
+--local menu = "tofi-run | xargs hyprctl dispatch exec --"
 
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
--- closeWindowBind:set_enabled(false)
+local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+
+hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(
 	mainMod .. " + M",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
-hl.bind(mainMod .. " + C", hl.dsp.window.close())
-hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(filemanager))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(dmenu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("waypaper --restore"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grim -g "$(slurp)" - | wl-copy"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -41,7 +45,7 @@ end
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
